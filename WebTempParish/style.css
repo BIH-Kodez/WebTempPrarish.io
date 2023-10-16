@@ -1,0 +1,255 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: rgba(0,24,51,0.8889);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+    margin-right: 15px; /* Optional spacing between the list items */
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent; /* Initial transparent underline */
+    transition: border-bottom-color 0.3s; /* Animation for the underline */
+}
+
+nav a:hover {
+    border-bottom-color: #fff; /* Color of the underline when hovering */
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+#parallax1 {
+    background-image: url('images/pexels-em-hopper-287332.jpg');
+}
+
+#parallax2 {
+    background-image: url('images/pexels-pixabay-356658.jpg');
+}
+
+.content {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.content h1, .content h2, .content p {
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#general-content {
+    /*background-color: #f4f4; /* Light gray background for contrast */
+    /*padding: 50px 0; /* Padding top and bottom */
+}
+
+.container {
+    max-width: 100%; /* Limiting the width to make text readable on large screens */
+    margin: 0 auto; /* Centers the container */
+    padding: 10px 20px; /* Padding on the sides to prevent content from touching the edge on small screens */
+    background-color: #fff; /* White background for the inner container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,24,51,0.8889);
+    border: 1px solid #fff;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.about-header {
+    font-size: 2em; /* Make the header bigger */
+    cursor: pointer; /* Change cursor to a hand when hovering over the header */
+    color: #fff;
+    border: 2px solid transparent; /* Set an initial transparent border to avoid resizing issues */
+    transition: border-color 0.3s ease, transform 0.3s ease; /* Smooth transition for the border and hover effect */
+}
+
+.about-header:hover {
+    padding: 10px;
+    border-color: #fff; /* The color of the border when hovering */
+    transform: scale(1.05); /* Slightly enlarging the h2 for emphasis */
+}
+
+.about-content {
+    opacity: 0; /* Initially hide the content */
+    transform: translateX(-100%); /* Push content out of view to the left */
+    transition: opacity 0.4s, transform 0.4s; /* Transition effect for smoother animation */
+    color: #fff;
+}
+
+
+
+h2, h3 {
+    color: #333; /* Darker text color for headings */
+    margin-bottom: 20px; /* Space below headings */
+}
+
+p {
+    color: #555; /* Slightly lighter text color for paragraphs */
+    line-height: 1.6; /* Improved readability */
+    margin-bottom: 30px; /* Space between paragraphs */
+}
+
+/* Add more styles or modify these as per your preferences */
+
+
+.events-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  /* Allows cards to wrap to the next line on smaller screens */
+    gap: 20px;  /* Adds space between cards */
+}
+
+.event-card {
+    width: 30%;  /* width of each card */
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Hover effect */
+}
+
+.event-card:hover {
+    transform: scale(1.05); /* Hover effect */
+}
+
+.event-card img {
+    width: 100%;
+    height: auto;  /* Image takes full width of card */
+    margin-bottom: 10px;
+}
+
+/* Existing styles */
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    grid-template-areas: 
+        "ministry staff links"
+        "copyright copyright copyright";
+    gap: 20px; 
+    padding: 20px;
+    background: rgba(0,24,51,0.8889); 
+    color: #fff;
+}
+
+.footer-section:nth-child(1) {
+    grid-area: ministry;
+}
+
+.footer-section:nth-child(2) {
+    grid-area: staff;
+}
+
+.footer-section:nth-child(3) {
+    grid-area: links;
+}
+
+.footer-copyright {
+    grid-area: copyright;
+    text-align: center; 
+    padding: 10px 0; 
+    background: rgba(0,24,51,0.8889);
+    margin-top: 20px; 
+    color: #fff;
+}
+
+/* ... rest of the styles remain unchanged ... */
+
+
+
+
+.footer-section {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    padding: 10px; /* Padding for inner content */
+}
+
+.footer-section h3{
+    color: #fff;
+    margin-bottom: 10px; /* Gap between title and content */
+}
+
+.footer-section p{
+    color: #fff;
+}
+
+#footer-fix{
+    margin: 10px;
+}
+
+.footer-section a {
+    color: #fff; /* White link color */
+    text-decoration: none; /* Remove underline */
+    margin-bottom: 5px; /* Spacing between links */
+    transition: color 0.3s ease; /* Transition effect for hover */
+}
+
+.footer-section a:hover {
+    color: #ddd; /* Lighter color on hover */
+}
+
+
+
+/* Responsive rule for smaller screens */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr; /* One column */
+    }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-card {
+        width: 90%;  /* Cards take almost full width on smaller screens */
+        margin: auto;  /* Center cards */
+    }
+}
